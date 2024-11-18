@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>SHIELD</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bx-shield-quarter' ></i>
+			<span class="text">SHIELD</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Login</span>
+				</a>
+			</li>
+			</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+		  <i class='bx bx-menu'></i>
+		  <a href="#" class="nav-link"></a>
+		  <form action="#">
+		    <div class="form-input">
+		      
+		      <button type="submit" class=""><i class=''></i></button>
+		    </div>
+		  </form>
+		  <input type="checkbox" id="switch-mode" hidden>
+		  <label for="switch-mode" class="switch-mode"></label>
+		  
+		 
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+				  
+					<h1>Enter Password</h1>
+					<a></a>
+					<br>
+					
+					<form>
+					  <label for="pswd">Enter your password: </label>
+					  <input type="password" id="pswd">
+					  <input class="btn-download" type="button" value="Submit" onclick="checkPswd();" />
+					</form>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#"></a>
+						</li>
+						<li><i class='' ></i></li>
+						<li>
+							<a class="active" href="#"></a>
+						</li>
+					</ul>
+				</div>
+				
+	</section>
+	<!-- CONTENT -->
+	
+
+<script>
+  
+  const passwords = [
+    {
+      pass: "devraj",
+      page: "index1"
+      },
+    {
+      pass: "Devraj",
+      page: "index2"
+      },
+    {
+      pass: "anotherpassword",
+      page: "secretpage"
+      }
+  ];
+  
+  function checkPswd() {
+    const passInput = document.getElementById("pswd").value;
+    const passMatch = passwords.find(o => o.pass === passInput);
+  
+    if (passMatch) {
+      console.log(`Redirecting to: "${passMatch.page}"`);
+      window.location = `${passMatch.page}.html`;
+    } else {
+      alert("Passwords do not match.");
+    }
+  }
+</script>
+
+	<script src="script.js"></script>
+</body>
+</html>
+
+<style>
+  input[type=password] {
+
+    width: 100%;
+
+    padding: 12px 20px;
+
+    margin: 8px 0;
+
+    box-sizing: border-box;
+
+    border: 2px solid #3C91E6;
+
+    border-radius: 4px;
+
+  }
+</style>
